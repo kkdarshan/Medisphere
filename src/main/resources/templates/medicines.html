@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Available Medicines - Medisphere</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #cce5ff, #f2f7ff);
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    h1 {
+      background-color: #1a73e8;
+      color: white;
+      padding: 20px 0;
+      margin: 0;
+      font-size: 28px;
+      box-shadow: 0 4px 15px rgba(26,115,232,0.5);
+    }
+
+    .container {
+      margin: 30px auto;
+      width: 85%;
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    .search-bar {
+      margin-bottom: 20px;
+    }
+
+    .search-bar input {
+      padding: 10px;
+      width: 70%;
+      border: 1px solid #ccc;
+      border-radius: 25px;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .search-bar input:focus {
+      box-shadow: 0 0 10px rgba(26,115,232,0.5);
+      outline: none;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #1a73e8;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    tr:hover {
+      background-color: #e8f0fe;
+    }
+
+    .no-data {
+      color: #999;
+      margin-top: 20px;
+      font-style: italic;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: #1a73e8;
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-weight: 600;
+      transition: 0.3s;
+      box-shadow: 0 0 15px rgba(26,115,232,0.5);
+    }
+
+    .back-btn:hover {
+      background: #0b59d1;
+      box-shadow: 0 0 25px rgba(26,115,232,0.8);
+    }
+
+    .advisor-link {
+      display: inline-block;
+      margin-top: 15px;
+      color: #1a73e8;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .advisor-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>💊 Available Medicines</h1>
+
+  <div class="container">
+    <div class="search-bar">
+      <input type="text" id="search" placeholder="🔍 Search medicine by name, type, or manufacturer..." onkeyup="filterMedicines()">
+    </div>
+
+    <table id="medicineTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Manufacturer</th>
+          <th>Price (₹)</th>
+          <th>Quantity</th>
+          <th>Expiry Date</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr th:each="m : ${medicines}">
+          <td th:text="${m.name}"></td>
+          <td th:text="${m.type}"></td>
+          <td th:text="${m.manufacturer}"></td>
+          <td th:text="${m.price}"></td>
+          <td th:text="${m.quantity}"></td>
+          <td th:text="${#temporals.format(m.expiryDate, 'dd-MM-yyyy')}"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div th:if="${#lists.isEmpty(medicines)}" class="no-data">
+      No medicines found in the system.
+    </div>
+
+    <a href="/medicines/advisor" class="advisor-link">🧠 Try Smart Medicine Advisor →</a><br>
+    <a href="/home" class="back-btn">⬅ Back to Dashboard</a>
+  </div>
+
+  <script>
+    // 🔍 Client-side search
+    function filterMedicines() {
+      const input = document.getElementById("search").value.toLowerCase();
+      const rows = document.querySelectorAll("#medicineTable tbody tr");
+
+      rows.forEach(row => {
+        const text = row.textContent.toLowerCase();
+        row.style.display = text.includes(input) ? "" : "none";
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,369 @@
+/*
+Theme Name: Aamet Business Theme
+Version: 1.1
+*/
+
+/*---------------------------------
+    WELCOME AREA
+---------------------------------*/
+.welcome-area.inner {
+    padding: 150px 0 200px 0;
+}
+
+.inner-wlc h2 {
+    font-size: 48px;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.inner-wlc h3 {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+.inner-wlc a {
+    color: #fff;
+}
+
+.inner-filltext h1 {
+    text-transform: capitalize;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #161b1d;
+}
+
+/*---------------------------------
+    BLOG SECTION
+---------------------------------*/
+.single-blog-section-description {
+    padding: 30px 0 50px 0;
+}
+
+.single-blog-section-description h2 {
+    font-size: 32px;
+    line-height: 40px;
+    color: #172541;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.single-blog-section-description p {
+    font-size: 16px;
+    line-height: 30px;
+    color: #565872;
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+}
+
+.single-blog-section-author li {
+    display: inline-block;
+    padding: 25px 15px 25px 0;
+}
+
+.single-blog-section-author li a {
+    display: inline-block;
+    text-transform: capitalize;
+    font-size: 16px;
+    color: #565872;
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+}
+
+a.blog-author {
+    padding-left: 50px;
+    position: relative;
+    z-index: 2;
+}
+
+a.blog-author img {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    left: 0;
+    top: 50%;
+    margin-top: -20px;
+    border-radius: 50%;
+    border: 1px solid #273272;
+}
+
+.single-blog-section-author li a i {
+    color: #273272;
+    padding-right: 5px;
+}
+
+.single-blog-section-img {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    z-index: 2;
+}
+
+span.single-blog-section-img-tag {
+    color: #fff;
+    text-transform: capitalize;
+    background: #000;
+    padding: 10px 25px;
+    transition: all .3s ease;
+}
+
+.single-blog-section:hover span.single-blog-section-img-tag {
+    background: #273272;
+}
+
+/*---------------------------------
+    BLOG BOX
+---------------------------------*/
+.blog-box {
+    margin-bottom: 50px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    padding: 50px 30px;
+}
+
+.blog-box h3 {
+    font-size: 24px;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #3e425c;
+}
+
+.blog-box p {
+    text-transform: capitalize;
+    font-size: 15px;
+    font-weight: 400;
+    color: #000;
+    opacity: .7;
+    margin: 0;
+}
+
+/*---------------------------------
+    PAGINATION
+---------------------------------*/
+.cpagination .page-link {
+    display: block;
+    padding: 16px;
+    background-color: #fff;
+    border: 1px solid #273272;
+    color: #273272;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: all .3s ease;
+}
+
+.cpagination .page-link:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.cpagination .page-link:hover {
+    background: #273272;
+    color: #fff;
+}
+
+/*---------------------------------
+    PORTFOLIO SECTION
+---------------------------------*/
+.portfolio-bg-1 { background: url(../img/project/portfolio1.jpg); }
+.portfolio-bg-2 { background: url(../img/project/portfolio2.jpg); }
+.portfolio-bg-3 { background: url(../img/project/portfolio3.jpg); }
+.portfolio-bg-4 { background: url(../img/project/portfolio4.jpg); }
+.portfolio-bg-5 { background: url(../img/project/portfolio5.jpg); }
+.portfolio-bg-6 { background: url(../img/project/portfolio6.jpg); }
+.portfolio-bg-7 { background: url(../img/project/01.jpg); }
+.portfolio-bg-8 { background: url(../img/project/02.jpg); }
+.portfolio-bg-9 { background: url(../img/project/03.jpg); }
+
+.single-portfolio-item {
+    height: 310px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    margin: 15px 0;
+    position: relative;
+    box-shadow: 3px 4px 13px #f2f2f2;
+    overflow: hidden;
+}
+
+.single-portfolio-item:hover .portfolio-hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+.portfolio-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease;
+}
+
+.portfolio-hover:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 50%;
+    background: #000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease;
+}
+
+.single-portfolio-item:hover .portfolio-hover:after {
+    height: 100%;
+    width: 100%;
+    opacity: .5;
+    visibility: visible;
+}
+
+.portfolio-hover h4,
+.portfolio-hover a {
+    font-size: 40px;
+    color: #fff;
+    transition: all .3s ease;
+    transform: scale(1.5);
+}
+
+.single-portfolio-item:hover .portfolio-hover a {
+    transform: scale(1);
+}
+
+.portfolio-hover-table {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.portfolio-hover-table-cell {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+/*---------------------------------
+    CONTACT FORM
+---------------------------------*/
+.contact-form input,
+.contact-form textarea {
+    border: 1px solid #bcbcbc;
+    padding: 13px;
+    margin-bottom: 17px;
+    border-radius: 5px;
+    transition: border-color .3s ease, box-shadow .3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #273272;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/*---------------------------------
+    QUOTE SECTION
+---------------------------------*/
+.single-quote {
+    padding: 60px 50px;
+    background: #273272;
+    color: #fff;
+    position: relative;
+}
+
+.single-quote h2 {
+    font-size: 30px;
+    line-height: 40px;
+    text-transform: capitalize;
+    margin: 20px 0 0 0;
+}
+
+.single-quote h6 {
+    font-size: 14px;
+    text-transform: capitalize;
+    margin-top: 30px;
+}
+
+.single-quote:after {
+    content: "Q";
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    font-size: 80px;
+    color: #ff3d10;
+    opacity: 0.3;
+}
+
+/*---------------------------------
+    GENERAL FIXES & UTILITIES
+---------------------------------*/
+.border-effect {
+    position: relative;
+    height: 1px;
+    width: 100%;
+    background: #f5f5f5;
+    margin-bottom: 30px;
+    transition: all .3s ease;
+}
+
+.border-effect:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 10%;
+    background: #273272;
+    top: 0;
+    left: 0;
+    transition: all .3s ease;
+}
+
+.blog-box:hover .border-effect:after {
+    width: 100%;
+}
+
+/*---------------------------------
+    TOCKEN FORM
+---------------------------------*/
+.tocken__form__area {
+    padding: 50px 60px;
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.tocken__form__heading h2 {
+    font-size: 36px;
+    line-height: 45px;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.tocken__form input {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 12px;
+}
+
+button.tocken__submit__btn {
+    border: none;
+    background: #ff3d10;
+    font-size: 14px;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 13px;
+    border-radius: 12px;
+    transition: background .3s ease;
+}
+
+button.tocken__submit__btn:hover {
+    background: #e6350e;
+}

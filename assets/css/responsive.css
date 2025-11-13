@@ -1,0 +1,335 @@
+/*
+Theme Name: Aamet Business Theme
+Version: 1.0.1
+Description: Cleaned and optimized responsive theme stylesheet.
+Author: Your Name
+*/
+
+/* ================================
+   > Large screens (1401px and up)
+   ================================ */
+@media only screen and (min-width: 1401px) {
+    .w5i1 {
+        right: 0;
+        bottom: 15%;
+    }
+    img.business__5__tab {
+        right: 34%;
+    }
+}
+
+/* ================================
+   > Desktop screens (max 1400px)
+   ================================ */
+@media only screen and (max-width: 1400px) {
+    .single__project__3,
+    .single__project__3___img {
+        height: 350px;
+    }
+    .welcome__right__author {
+        position: absolute;
+        right: 7%;
+        bottom: 0;
+        height: 85%;
+    }
+    .single__project,
+    .single__project__img {
+        height: 320px;
+        position: relative;
+        z-index: 2;
+    }
+    .padding-100 {
+        padding: 40px;
+    }
+    img.business__4__img {
+        position: absolute;
+        right: -10%;
+        top: 12%;
+    }
+    img.business__5__tab {
+        right: 35%;
+    }
+    img.business__5__img {
+        right: -10%;
+    }
+    .about__single__service__list:nth-child(4) {
+        margin-bottom: 0;
+    }
+}
+
+/* ================================
+   > Medium screens (max 1200px)
+   ================================ */
+@media only screen and (max-width: 1200px) {
+    .w5i1 {
+        right: -25%;
+        bottom: 15%;
+    }
+}
+
+/* ================================
+   > Laptops & Tablets (min 992px)
+   ================================ */
+@media only screen and (min-width: 992px) {
+    .pricing__area__2 .row:last-child > div,
+    .portfolio__page .row > div {
+        margin: 0;
+        padding: 0;
+    }
+    .single__project__3 {
+        margin: 50px 0;
+    }
+}
+
+/* ================================
+   > Tablets (max 991px)
+   ================================ */
+@media only screen and (max-width: 991px) {
+    .about__area .heading.no__margin,
+    .about__area__2 .heading.no__margin,
+    .about__area_3 .heading.no__margin,
+    .about__area__4 .heading.no__margin,
+    .about__area__5 .heading.no__margin {
+        margin-top: 30px !important;
+    }
+
+    img.responsive__img,
+    .welcome__right__author,
+    img.welcome__phone__img,
+    .welcome__5__scroll__btn,
+    img.business__5__img,
+    img.business__5__tab {
+        display: none;
+    }
+
+    .schedule__area {
+        text-align: center;
+    }
+
+    .cta__content h2 {
+        font-size: 36px;
+        line-height: 46px;
+    }
+
+    a.footer__logo2 {
+        position: relative;
+        top: 0;
+        margin-bottom: 30px;
+    }
+
+    .single__price__2.active {
+        transform: scale(1);
+    }
+
+    .single__service6 {
+        padding: 15px;
+    }
+
+    .about__area_5 .heading {
+        margin-top: 50px !important;
+    }
+
+    .about__area__4 .heading {
+        margin-top: 40px;
+    }
+
+    .space-lg-70 {
+        height: 0;
+    }
+}
+
+/* ================================
+   > Mobile screens (max 767px)
+   ================================ */
+@media only screen and (max-width: 767px) {
+
+    .welcome__title h1 {
+        margin-bottom: 40px;
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .welcome__area {
+        height: 570px;
+    }
+
+    .welcome__area.welcome__area__2,
+    .welcome__area.welcome__area__3 {
+        text-align: center;
+        margin-top: 0;
+        background-position: -300px 275px !important;
+        background-size: 175% 65% !important;
+        padding-bottom: 20%;
+    }
+
+    .welcome__title2 h6 {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .heading h3 {
+        font-size: 28px;
+        line-height: 36px;
+        margin-bottom: 20px;
+    }
+
+    .heading h2 {
+        font-size: 36px;
+        line-height: 40px !important;
+        text-align: center;
+    }
+
+    .cta__content h2 {
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    .cta__area a.cbtn {
+        float: left;
+        margin-top: 30px;
+    }
+
+    .single__footer {
+        margin-top: 30px;
+    }
+
+    .section-padding-200 {
+        padding: 100px 0;
+    }
+
+    .about__area .heading__1,
+    .about__area_2 .heading__2 {
+        margin: 30px 0 0;
+    }
+
+    .welcome__title2 h1 {
+        font-size: 22px;
+        line-height: 40px;
+        margin-bottom: 2px;
+    }
+
+    a.cbtn.cbtn2 {
+        padding: 5px 25px;
+        font-size: 13px;
+        margin-top: 14px;
+    }
+
+    .contact__3__form {
+        background: #fff;
+        border-top: 2px solid #88dc92;
+        border-bottom: 2px solid #88dc92;
+        padding: 20px;
+    }
+
+    .single__contact__3__methode {
+        position: relative;
+        padding-left: 50px;
+        margin-bottom: 30px;
+    }
+
+    .single__contact__3__methode__icon {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        line-height: 40px;
+        font-size: 28px;
+    }
+
+    .contact__3__form__area {
+        background: #f0f5ff;
+        margin-bottom: 50px;
+    }
+
+    .map3 {
+        height: 400px;
+    }
+
+    .welcome__title5 h1,
+    .welcome__title4 h1,
+    .welcome__title6 h1 {
+        font-size: 32px;
+        line-height: 42px;
+    }
+
+    .welcome__title6 h5 {
+        font-size: 18px;
+    }
+
+    .single__project__3 {
+        height: 300px;
+        margin-top: 50px;
+    }
+
+    .owl-item.active.center .single__project__3 {
+        transform: scale(1);
+        margin-top: 0;
+    }
+
+    .about6__contact__button {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .heading.heading__5 h3 {
+        font-size: 32px;
+        line-height: 42px;
+    }
+
+    .cta__content6 {
+        text-align: center;
+    }
+
+    .cta__content6 h2 {
+        font-size: 32px;
+        line-height: 42px;
+        margin-bottom: 30px;
+    }
+
+    .about__area__4 a.cbtn.cbtn6 {
+        margin-top: 50px;
+    }
+
+    .padding100_70 {
+        padding: 50px 0 20px;
+    }
+
+    .footer__area .single__footer__2 .footer__logo2 img {
+        width: 160px !important;
+    }
+
+    .tocken__form__area {
+        padding: 30px;
+    }
+}
+
+/* ================================
+   > Small devices (480px - 767px)
+   ================================ */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .container {
+        width: 480px;
+    }
+
+    .welcome__area.welcome__area__2,
+    .welcome__area.welcome__area__3 {
+        padding-bottom: 30%;
+    }
+}
+
+/* ================================
+   > Extra small devices (max 340px)
+   ================================ */
+@media only screen and (max-width: 340px) {
+    .welcome__area.welcome__area__2,
+    .welcome__area.welcome__area__3 {
+        padding-bottom: 60%;
+    }
+}
+
+/* =========================================================================
+   End of File
+   ========================================================================= */

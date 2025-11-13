@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Appointments - Medisphere</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #cce5ff, #f2f7ff);
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    h1 {
+      background-color: #1a73e8;
+      color: white;
+      padding: 15px;
+      margin: 0;
+    }
+    table {
+      width: 90%;
+      margin: 30px auto;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    th, td {
+      padding: 12px 10px;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background: #1a73e8;
+      color: white;
+    }
+    tr:hover { background: #f1f1f1; }
+    .status {
+      font-weight: bold;
+      border-radius: 5px;
+      padding: 4px 8px;
+    }
+    .scheduled {
+      color: white;
+      background: #28a745;
+    }
+    .closed {
+      color: white;
+      background: #dc3545;
+    }
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #1a73e8;
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    a:hover {
+      background: #0b59d1;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📅 Your Appointments</h1>
+
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Patient Name</th>
+      <th>Email</th>
+      <th>Doctor</th>
+      <th>Specialization</th>
+      <th>Date & Time</th>
+      <th>Status</th>
+    </tr>
+
+    <tr th:each="a : ${appointments}">
+      <td th:text="${a.id}"></td>
+      <td th:text="${a.patientName}"></td>
+      <td th:text="${a.patientEmail}"></td>
+      <td th:text="${a.doctorName}"></td>
+      <td th:text="${a.doctorSpecialization}"></td>
+      <td th:text="${#temporals.format(a.appointmentDateTime, 'dd-MM-yyyy HH:mm')}"></td>
+
+      <!-- ✅ Dynamically color based on status -->
+      <td>
+        <span th:classappend="${a.isExpired()} ? 'status closed' : 'status scheduled'"
+              th:text="${a.isExpired()} ? 'Closed' : 'Scheduled'"></span>
+      </td>
+    </tr>
+  </table>
+
+  <a href="/home">⬅ Back to Dashboard</a>
+</body>
+</html>

@@ -1,0 +1,72 @@
+/* ----------------------- */
+
+.footer__area .single__footer__2 .footer__logo2 img {
+    width: 200px;
+}
+
+.responsive-map {
+    overflow: hidden;
+    padding-bottom: 30%;
+    position: relative;
+    height: 0;
+}
+
+.responsive-map iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.main__menu__2 .current a {
+    color: #273272;
+}
+
+.copywrt_prt {
+    border-top: 1px solid #000;
+    padding-top: 30px;
+}
+
+.welcome__carousel2 .owl-dots>div.active span {
+    color: #fff;
+}
+
+.about__left__img2 img {
+    border-radius: 40px;
+}
+
+.abt_btn_otr {
+    width: 100%;
+    text-align: center;
+}
+
+.owl-nav {
+    position: relative;
+    top: -360px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.owl-nav .owl-prev span {
+    font-size: 80px;
+    color: #172541;
+    padding-left: 10px;
+}
+
+.owl-nav .owl-next span {
+    font-size: 80px;
+    color: #172541;
+    padding-right: 10px;
+}
+
+
+#typewriter-text {
+    overflow: hidden; /* Hide overflow to create the typewriter effect */
+    border-right: 1px solid black; /* Simulate the cursor */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+
+
+
