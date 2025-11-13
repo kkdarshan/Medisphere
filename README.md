@@ -184,20 +184,6 @@ medicine
 
 Stores registered medicines.
 
-
----
-
-📸 Screenshots
-
-(You can add screenshots here after pushing repository)
-
-![Registration Page](screenshots/registration.png)
-![Doctors Page](screenshots/doctors.png)
-![Appointments](screenshots/appointments.png)
-
-
----
-
 🤝 Contributing
 
 Feel free to fork this repo and submit pull requests.
